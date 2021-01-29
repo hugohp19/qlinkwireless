@@ -1,0 +1,106 @@
+/* fa-brands-400 */
+@font-face {
+  font-family: 'fa-brands';
+  src: local('fa-brands'),
+  url('../../assets/webfonts/fa-brands-400.ttf') format('truetype'),
+  url('../../assets/webfonts/fa-brands-400.svg') format('svg'),
+  /* url("../../assets/webfonts/fa-brands-400.eot") format('embedded-opentype'), */
+  url("../../assets/webfonts/fa-brands-400.woff") format('woff'),
+  url("../../assets/webfonts/fa-brands-400.woff2") format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* fa-regular-400 */
+@font-face {
+  font-family: 'fa-regular';
+  src: local('fa-regular'),
+  url('../../assets/webfonts/fa-regular-400.ttf') format('truetype'),
+  url('../../assets/webfonts/fa-regular-400.svg') format('svg'),
+  /* url("../../assets/webfonts/fa-regular-400.eot") format('embedded-opentype'), */
+  url("../../assets/webfonts/fa-regular-400.woff") format('woff'),
+  url("../../assets/webfonts/fa-regular-400.woff2") format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* fa-solid-400 */
+@font-face {
+  font-family: 'fa-solid';
+  src: local('fa-solid'),
+  url('../../assets/webfonts/fa-brands-400.ttf') format('truetype'),
+  url('../../assets/webfonts/fa-solid-900.svg') format('svg'),
+  /* url("../../assets/webfonts/fa-solid-900.eot") format('embedded-opentype'), */
+  url("../../assets/webfonts/fa-solid-900.woff") format('woff'),
+  url("../../assets/webfonts/fa-solid-900.woff2") format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* OpenSans-Bold */
+@font-face {
+  font-family: 'OpenSans-Bold';
+  src: local('OpenSans-Bold'),
+  url('../../assets/webfonts/OpenSans-Bold.ttf') format('truetype'),
+  url('../../assets/webfonts/OpenSans-Bold.svg') format('svg'),
+  /* url("../../assets/webfonts/OpenSans-Bold.eot") format('embedded-opentype'), */
+  url("../../assets/webfonts/OpenSans-Bold.woff") format('woff'),
+  url("../../assets/webfonts/OpenSans-Bold.woff2") format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* OpenSans-Light */
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: local('OpenSans-Light'),
+  url('../../assets/webfonts/OpenSans-Light.ttf') format('truetype'),
+  url('../../assets/webfonts/OpenSans-Light.svg') format('svg'),
+  /* url("../../assets/webfonts/OpenSans-Light.eot") format('embedded-opentype'), */
+  url("../../assets/webfonts/OpenSans-Light.woff") format('woff'),
+  url("../../assets/webfonts/OpenSans-Light.woff2") format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* OpenSans-Regular */
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: local('OpenSans-Regular'),
+  url('../../assets/webfonts/OpenSans-Regular.ttf') format('truetype'),
+  url('../../assets/webfonts/OpenSans-Regular.svg') format('svg'),
+  /* url("../../assets/webfonts/OpenSans-Regular.eot") format('embedded-opentype'), */
+  url("../../assets/webfonts/OpenSans-Regular.woff") format('woff'),
+  url("../../assets/webfonts/OpenSans-Regular.woff2") format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* OpenSans-SemiBold */
+@font-face {
+  font-family: 'OpenSans-SemiBold';
+  src: local('OpenSans-SemiBold'),
+  url('../../assets/webfonts/OpenSans-SemiBold.ttf') format('truetype'),
+  url('../../assets/webfonts/OpenSans-SemiBold.svg') format('svg'),
+  /* url("../../assets/webfonts/OpenSans-SemiBold.eot") format('embedded-opentype'), */
+  url("../../assets/webfonts/OpenSans-SemiBold.woff") format('woff'),
+  url("../../assets/webfonts/OpenSans-SemiBold.woff2") format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.bold-text {
+  font-family: OpenSans-Bold;
+}
+
+.semibold-text {
+  font-family: OpenSans-SemiBold;
+}
+
+.regular-text {
+  font-family: OpenSans-Regular;
+}
+
+.light-text{
+  font-family: OpenSans-Light;
+}
