@@ -1,0 +1,205 @@
+/* fa-brands-400 */
+@font-face {
+  font-family: 'fa-brands';
+  src: local("fa-brands"), url("../../assets/webfonts/fa-brands-400.ttf") format("truetype"), url("../../assets/webfonts/fa-brands-400.svg") format("svg"), url("../../assets/webfonts/fa-brands-400.woff") format("woff"), url("../../assets/webfonts/fa-brands-400.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* fa-regular-400 */
+@font-face {
+  font-family: 'fa-regular';
+  src: local("fa-regular"), url("../../assets/webfonts/fa-regular-400.ttf") format("truetype"), url("../../assets/webfonts/fa-regular-400.svg") format("svg"), url("../../assets/webfonts/fa-regular-400.woff") format("woff"), url("../../assets/webfonts/fa-regular-400.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* fa-solid-400 */
+@font-face {
+  font-family: 'fa-solid';
+  src: local("fa-solid"), url("../../assets/webfonts/fa-brands-400.ttf") format("truetype"), url("../../assets/webfonts/fa-solid-900.svg") format("svg"), url("../../assets/webfonts/fa-solid-900.woff") format("woff"), url("../../assets/webfonts/fa-solid-900.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* OpenSans-Bold */
+@font-face {
+  font-family: 'OpenSans-Bold';
+  src: local("OpenSans-Bold"), url("../../assets/webfonts/OpenSans-Bold.ttf") format("truetype"), url("../../assets/webfonts/OpenSans-Bold.svg") format("svg"), url("../../assets/webfonts/OpenSans-Bold.woff") format("woff"), url("../../assets/webfonts/OpenSans-Bold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* OpenSans-Light */
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: local("OpenSans-Light"), url("../../assets/webfonts/OpenSans-Light.ttf") format("truetype"), url("../../assets/webfonts/OpenSans-Light.svg") format("svg"), url("../../assets/webfonts/OpenSans-Light.woff") format("woff"), url("../../assets/webfonts/OpenSans-Light.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* OpenSans-Regular */
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: local("OpenSans-Regular"), url("../../assets/webfonts/OpenSans-Regular.ttf") format("truetype"), url("../../assets/webfonts/OpenSans-Regular.svg") format("svg"), url("../../assets/webfonts/OpenSans-Regular.woff") format("woff"), url("../../assets/webfonts/OpenSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* OpenSans-SemiBold */
+@font-face {
+  font-family: 'OpenSans-SemiBold';
+  src: local("OpenSans-SemiBold"), url("../../assets/webfonts/OpenSans-SemiBold.ttf") format("truetype"), url("../../assets/webfonts/OpenSans-SemiBold.svg") format("svg"), url("../../assets/webfonts/OpenSans-SemiBold.woff") format("woff"), url("../../assets/webfonts/OpenSans-SemiBold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.bold-text {
+  font-family: OpenSans-Bold;
+}
+
+.semibold-text {
+  font-family: OpenSans-SemiBold;
+}
+
+.regular-text {
+  font-family: OpenSans-Regular;
+}
+
+.light-text {
+  font-family: OpenSans-Light;
+}
+
+.nav {
+  width: 100%;
+  height: 3em;
+  border-bottom: 2px solid blue;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav .logo {
+  padding: 15px;
+}
+
+.nav .burguer {
+  width: 2rem;
+  height: 2rem;
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.nav .burguer div {
+  width: 2rem;
+  height: 0.25rem;
+  border-radius: 10px;
+}
+
+.nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.nav ul li {
+  padding: 12px;
+  font-size: 12px;
+  font-family: OpenSans-SemiBold;
+}
+
+@media (max-width: 768px) {
+  .nav .burguer {
+    z-index: 20;
+  }
+  .nav .burguer .open {
+    background-color: red;
+    -webkit-transform-origin: 1px;
+            transform-origin: 1px;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .nav .burguer .open:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .nav .burguer .open:nth-child(2) {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+  .nav .burguer .open:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  .nav .burguer .close {
+    background-color: darkgreen;
+    -webkit-transform-origin: 1px;
+            transform-origin: 1px;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .nav .burguer .close:nth-child(1) {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  .nav .burguer .close:nth-child(2) {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .nav .burguer .close:nth-child(3) {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  .nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    padding-top: 3.5rem;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  }
+  .nav ul li {
+    color: white;
+  }
+  .nav .open {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .nav .close {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+/*# sourceMappingURL=navBar.css.map */
