@@ -1,0 +1,33 @@
+@import '../../variables/variables';
+@import '../../fonts/fonts';
+
+
+.shopPage-container{
+  background-color: $pageBackgroundColor;
+  // background-color: lightseagreen;
+  padding: 25px 20px;
+  height: 100vh;
+
+  .shopPage_welcome-container{
+    border: 1px solid $borderColor;
+    border-radius: 5px;
+    background-color: $div_backgroundColor;
+    padding: 20px;
+    margin-top: 20px;
+
+    .shopPage_welcome-div{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      div{
+        padding: 20px 0;
+
+        img{
+          width: 200px;
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import './style/main.scss';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Navbar from './components/NavBar';
+import Navbar from './components/navBar';
 import Store from './pages/shop';
 import DeviceDetail from './pages/deviceDetail';
 import Test from './pages/test';
