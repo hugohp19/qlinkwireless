@@ -25,20 +25,6 @@ const NavBar = () => {
         <li>Log in</li>
       </ul>
     </div>
-   
-   
-   
-   
-    // <nav>
-    //   <div className='BurguerMenu-container'
-    //     role="button"
-    //     onClick={() => setStatus(status==='open' ? 'close' : 'open')}
-    //   >
-    //     <i className={status}></i>
-    //     <i className={status}></i>
-    //     <i className={status}></i>
-    //   </div>
-    // </nav>
   )
 }
 
