@@ -58,10 +58,12 @@
 
 
 
-@media (max-width: 768px){
+@media only screen and (max-width: 768px){
   .nav{
     .burguer{
       z-index: 20;
+      position: fixed;
+      background-color: $div_backgroundColor;
       .open{
         transform-origin: 1px;
         transition: all 0.5s ease;

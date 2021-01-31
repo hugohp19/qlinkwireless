@@ -1,0 +1,49 @@
+@import '../../variables/variables';
+@import '../../mixins/mixins.scss';
+
+.deviceCard-container{
+  background-color: $div_backgroundColor;
+  padding: 20px;
+  border: 1px solid $borderColor;
+  border-radius: 5px;
+  min-width: 180px;
+  max-width: 350px;
+  flex: 1;
+
+  @include flexSetUp(column, space-evenly, center);
+
+  img{
+    max-width: 100%;
+  }
+
+  p{
+    font-size: 1rem;
+  }
+
+  .deviceCard-top{
+    width: 100%;
+    border-bottom: 1px solid $lineColor;
+    h3{
+      font-size: 1.5rem;
+      margin-top: -15px;
+    }
+  }
+
+  .deviceCard-bottom{
+    padding-top: 10px;
+  }
+
+  button{
+    display: none;
+  }
+}
+
+// @media only screen and (max-width: 768px){
+  
+//   .deviceCard-container{
+//     button{
+//       display: none;
+//     }
+//   }
+
+// }
