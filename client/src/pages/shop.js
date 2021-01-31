@@ -34,8 +34,9 @@ const Shop = () => {
         </div>
         <div className='shopPage-deviceCard-container'>
           { devices && devices.map((device, index) => {
+            console.log(index)
             return (
-              <DeviceCard key={index} device={device}/>
+              <DeviceCard key={index} device={device} index={index}/>
             );
 
           })
