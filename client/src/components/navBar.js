@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../style/components/navBar.scss';
+import '../style/components/navBar/navBar.scss';
 import QLinkWirelessLogo from '../assets/images/Image5.png';
 
 const NavBar = () => {
@@ -8,7 +8,7 @@ const NavBar = () => {
   return (
     <div className='nav'>
       <div className="logo">
-        <img src={QLinkWirelessLogo} />
+        <img src={QLinkWirelessLogo} alt='Q Link Wireless Logo'/>
       </div>
       
       <div role='button' className='burguer' onClick={() => setStatus(status==='open' ? 'close' : 'open')}>
@@ -18,10 +18,10 @@ const NavBar = () => {
       </div>
 
       <ul className={status}>
-        <li>Your Q Link<i classname='arrow' /></li>
-        <li>Activity<i classname='arrow' /></li>
-        <li>Shop<i classname='arrow' /></li>
-        <li>Help Center<i classname='arrow' /></li>
+        <li>Your Q Link<i className='arrow' /></li>
+        <li>Activity<i className='arrow' /></li>
+        <li>Shop<i className='arrow' /></li>
+        <li>Help Center<i className='arrow' /></li>
         <li>Log in</li>
       </ul>
     </div>
