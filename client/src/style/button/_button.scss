@@ -10,3 +10,27 @@
   font-family: OpenSans-Bold;
   color: $secondaryColor;
 }
+
+.btnStyle-light{
+  background-color: white;
+  border: 1px solid $secondaryColor;
+  &:hover{
+    background-color: $secondaryColor;
+    color: white;
+  }
+  &:active{
+    border: 3px solid $div_backgroundColor;
+  }
+}
+
+.btnStyle-dark{
+  background-color: $secondaryColor;
+  color: white;
+  &:hover{
+    color: $secondaryColor;
+    background-color: $div_backgroundColor;
+  }
+  &:active{
+    border: 3px solid $secondaryColor;
+  }
+}
