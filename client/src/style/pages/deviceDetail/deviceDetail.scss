@@ -5,11 +5,12 @@
 .deviceDetail-container{
   background-color: $div_backgroundColor;
   padding: 20px;
+  margin-top: 20px;
   border: 1px solid $borderColor;
   border-radius: 5px;
   min-width: 180px;
-  max-width: 350px;
-  min-height: 490px;
+  max-width: 1024px;
+  width: 100%;
   flex: 1;
   p{
     color: $letterColor;
@@ -18,12 +19,14 @@
     display: flex;
     justify-content: center;
     img{
-      min-height: 300px;
       height: 100%;
+    }
+    .thumb{
+      display: none;
     }
   }
 
-  .deviceDetail-left-container{
+  .deviceDetail-right-container{
     p{
       margin-top: 20px;
     }
@@ -42,19 +45,24 @@
     }
 
     .deviceDetail-shipping{
-      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
       div{
+        &:nth-child(2){
+          margin-top: -30px;
+        }
+        min-height: 30px;
         display: flex;
         align-items: center;
-      }
-      img{
-        width: 30px;
-        height: 30px;
-        color: red;
-        margin-right: 20px;
-      }
-      p{
-        font-weight: 900;
+        img{
+          width: 20px;
+          height: 20px;
+          margin-right: 20px;
+        }
+        p{
+          font-weight: 900;
+        }
       }
     }
 
@@ -73,7 +81,6 @@
           margin-right: 30px;
           border: none;
           outline: none;
-         
           span{
             width:1.8rem;
             height:1.8rem;
@@ -111,42 +118,52 @@
       .deviceDetail-storage_payment{
         padding: 20px 0;
         border-bottom: 1px solid $borderColor;
-        div{
+        .deviceDetail-storage{
           display:flex;
           justify-content: space-between;
-        }
-        .deviceDetail-storage{
+          gap: 5px;
           .btnStyle-CustomWidth {
             width: 100px;
           }
         }
         .deviceDetail-payment{
+          display:flex;
+          justify-content: space-between;
+          gap: 5px;
           .btnStyle-CustomWidth {
             width: 150px;
           }
         }
       }
-      .deviceDetail_bottom-priceInfo{
-        margin-top: 10px;
-        @include flexSetUp(row, flex-start, flex-start);
-        .deviceDetail_bottom-price{
-          height: 100%;
-          width: 40%;
-          padding-right: 5px;
-        }
-        .deviceDetail_bottom-payments{
-          border-left: 1px solid $borderColor;
-          padding-left: 20px;
-          line-height: 0.5rem;
-          p{
-            font-size: 0.8rem;
+      .deviceDetail_bottom-payments{
+        padding: 20px 0;
+        div{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          h3{
+            font-size: 1.6rem;
+            font-family: OpenSans-SemiBold;
+            span{
+              font-size: 1.2rem;
+            }
           }
-          span{
-            font-size: 0.8rem;
+          img{
+            height: 25px;
           }
         }
       }
+      .btnDiv{
+        padding: 30px 0;
+        display: flex;
+        justify-content: center;
+        button{
+          max-width: 300px;
+        }
+      }
     }
+    
     .btnStyle{
       margin-top: 10px;
       width: 100%;
@@ -167,6 +184,54 @@
   }
 }
 
+.container{
+  margin-top: 20px;
+  background-color: $div_backgroundColor;
+  padding: 20px;
+  border: 1px solid $borderColor;
+  border-radius: 5px;
+  min-width: 180px;
+  width: 100%;
+  max-width: 1024px;
+  h3{
+    padding: 20px 0;
+  }
+}
+
+.deviceDetail-features{
+  ul{
+    padding-left: 30px;
+    font-family: OpenSans-semiBold;
+    color: $letterColor;
+  }
+}
+
+.deviceDetail-specifications{
+  padding-bottom: 40px;
+  div{
+    margin: 0 10px;
+    table{ 
+      width: 100%;
+      font-size: 0.9rem;
+      td{
+        line-height: 2rem;
+      }
+      td:nth-child(odd){
+        font-family: OpenSans-Bold;
+        width: 40%;
+      }
+      td:nth-child(even){
+        border-left: 1px solid $borderColor;
+        padding-left: 10%;
+        color: $letterColor;
+      }
+      tr:nth-child(odd) {
+        background-color: $pageBackgroundColor;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 400px){
   
   .deviceDetail-container{
@@ -180,9 +245,62 @@
   .deviceDetail-container{
     min-width: 250px;
     padding: 20px 40px;
-
-    button.btnStyle{
-      display: unset;
+    display: flex;
+    justify-content: space-around;
+    h3, p{
+      font-size: 1rem;
+    }
+    .deviceDetail-imgContainer{
+      width: 100%;
+      min-width: 250px;
+      padding-top: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      .largePic{
+        width: 190px;
+        height: 350px;
+      }
+      div{
+        margin-top: 40px;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid $lineColor
+      }
+      .thumb{
+        display: unset;
+        width: 25px;
+        height: 45px;
+      }
+    }
+    .deviceDetail-right-container{
+      width: 100%;
+      padding-top: 30px;
+      .deviceDetail-bottom{
+        .deviceDetail-storage_payment{
+          .deviceDetail-storage{
+            width: 70%;
+          }
+          .deviceDetail-payment{
+            width: 70%;
+          }
+        }
+        .btnDiv{
+          visibility: hidden;
+        }
+        .deviceDetail_bottom-payments{
+          div{
+            width: 70%;
+            h3{
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
     }
 
     .deviceDetail-bottom{
@@ -191,6 +309,22 @@
           font-size: 1.5rem;
         }
       }
+    }
+  }
+
+  .container{
+    padding: 20px 40px 40px 40px;
+  }
+
+  .deviceDetail-features{
+    display: none;
+  }
+
+  .deviceDetail-specifications{
+    table{
+        td:nth-child(even){
+          padding-left: 100px;
+        }
     }
   }
 }

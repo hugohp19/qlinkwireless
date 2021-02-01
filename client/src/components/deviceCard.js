@@ -41,7 +41,7 @@ const DeviceCard = ({index, device}) => {
           </div>
         </div>
       </div>
-      <Link to={'/details/' + device.ProductId}><button className='btnStyle btnStyle-light' >View Details</button></Link>
+      <Link to={{pathname: '/details/' + device.ProductId, state: {device, deviceImage: deviceImages[index], deviceBrand: deviceBrand[0]}}}><button className='btnStyle btnStyle-light' >View Details</button></Link>
     </div>
   </>
   )

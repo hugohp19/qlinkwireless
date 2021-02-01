@@ -6,7 +6,6 @@
 
 .shopPage_divs-container{
   max-width: 1024px;
-
   .shopPage_welcome-container{
     border: 1px solid $borderColor;
     border-radius: 5px;
@@ -32,12 +31,22 @@
   .shopPage-deviceCard-container{
     @include flexSetUp(row, space-between, center);
     width: 100%;
-    margin-top: 30px;
+    margin-top: 10px;
     flex-wrap: wrap;
     gap: 10px;
   }
 }
 
-@media only screen and (max-width: 411px){
-  
+@media only screen and (min-width: 600px){
+  .shopPage_divs-container{
+    .shopPage_welcome-container{
+      .shopPage_welcome-div{
+        flex-direction: row;
+        padding: 0 30px;
+        .shopPage_welcome-image{
+          margin-right: 20px;
+        }
+      }
+    }
+  }
 }
