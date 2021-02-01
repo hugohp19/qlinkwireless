@@ -7,14 +7,16 @@ import DeviceCard from '../components/deviceCard';
 const Shop = () => {
   const [ devices, setDevices ] = useState([]);
 
-  useEffect( async () => {
-    try{
-      let devicesInfo = await axios.get(`/products`);
-      setDevices(devicesInfo.data);
-      console.log(devicesInfo.data);
-    } catch(err){
-      console.log(err)
+  useEffect(() => {
+    const getData = async () => {
+      try{
+        let devicesInfo = await axios.get(`/products`);
+        setDevices(devicesInfo.data);
+      } catch(err){
+        console.log(err)
+      }
     }
+    getData();
   }, []);
 
   return (
@@ -34,21 +36,12 @@ const Shop = () => {
         </div>
         <div className='shopPage-deviceCard-container'>
           { devices && devices.map((device, index) => {
-            console.log(index)
-            return (
-              <DeviceCard key={index} device={device} index={index}/>
-            );
-
-          })
-
+              return (
+                <DeviceCard key={index} device={device} index={index}/>
+              );
+            })
           }
-{/* 
-          <DeviceCard />
-          <DeviceCard />
-          <DeviceCard />
-          <DeviceCard />
-          <DeviceCard />
-          <DeviceCard /> */}
+
         </div>
       </div>
     </div>

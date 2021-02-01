@@ -8,10 +8,8 @@
   border-radius: 5px;
   min-width: 180px;
   max-width: 350px;
-  min-height: 500px;
+  min-height: 490px;
   flex: 1;
-  // @include flexSetUp(column, space-evenly, center);
-
   .deviceCard-imgContainer{
     height: 40%;
     display: flex;
@@ -25,6 +23,7 @@
   .deviceCard-top{
     width: 100%;
     margin-top: 10px;
+    padding-bottom: 10px;
     border-bottom: 1px solid $lineColor;
     h3{
       font-size: 1.5rem;
@@ -40,19 +39,91 @@
     p{
       font-size: 1rem;
     }
+    .deviceCard_bottom-btns{
+      button{
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        margin-right: 10px;
+        border: 0.5px solid darkgrey;
+        &:nth-child(1){
+          background-color: black;
+        }
+        &:nth-child(2){
+          background-color: rgb(222, 201, 161);
+        }
+        &:nth-child(3){
+          background-color: white;
+        }
+        cursor: none;
+        pointer-events: none;
+      }
+    }
+    .deviceCard_bottom-priceInfo{
+      margin-top: 10px;
+      @include flexSetUp(row, flex-start, flex-start);
+      .deviceCard_bottom-price{
+        height: 100%;
+        width: 40%;
+        padding-right: 5px;
+      }
+      .deviceCard_bottom-payments{
+        border-left: 1px solid $borderColor;
+        padding-left: 20px;
+        line-height: 0.5rem;
+        p{
+          font-size: 0.8rem;
+        }
+        span{
+          font-size: 0.8rem;
+        }
+      }
+    }
   }
-
-  button{
+  .btnStyle{
+    margin-top: 10px;
+    width: 100%;
     display: none;
+  }
+  .deviceDetailSummary{
+    position: relative;
+    top: 10px;
+    p{
+      font-family: OpenSans-semiBold;
+      font-size: 0.8rem;
+      background-color: $secondaryColor;
+      color: white;
+      border-radius: 5px;
+      padding: 5px;
+      box-shadow: 6px 7px 17px -1px rgba(0,0,0,0.75);
+    }
   }
 }
 
-// @media only screen and (max-width: 768px){
+@media only screen and (max-width: 400px){
   
-//   .deviceCard-container{
-//     button{
-//       display: none;
-//     }
-//   }
+  .deviceCard-container{
+    min-height: 300px;
+    max-width: 100%;
+  }
+}
 
-// }
+@media only screen and (min-width: 600px){
+  
+  .deviceCard-container{
+    min-width: 250px;
+    padding: 20px 40px;
+
+    button.btnStyle{
+      display: unset;
+    }
+
+    .deviceCard-bottom{
+      .deviceCard_bottom-priceInfo{
+       h3{
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
