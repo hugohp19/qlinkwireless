@@ -11,6 +11,15 @@
   color: $secondaryColor;
 }
 
+.btnStyle-CustomWidth {
+  height: 50px;
+  background-color: white;
+  border: 1px solid $secondaryColor;
+  border-radius: 5px;
+  font-family: OpenSans-Bold;
+  color: $secondaryColor;
+}
+
 .btnStyle-light{
   background-color: white;
   border: 1px solid $secondaryColor;
@@ -32,5 +41,31 @@
   }
   &:active{
     border: 3px solid $secondaryColor;
+  }
+}
+
+.btnStyle-white{
+  background-color: white;
+  color: $letterColor;
+  border: 1px solid $borderColor;
+  &:hover{
+    color: black;
+  }
+  &:active{
+    border: 3px solid $div_backgroundColor;
+  }
+}
+
+
+.btnStyle-gray{
+  background-color: white;
+  color: $letterColor;
+  border: 1px solid $borderColor;
+  &:hover{
+    background-color: $borderColor;
+    color: black;
+  }
+  &:active{
+    border: 3px solid $div_backgroundColor;
   }
 }
