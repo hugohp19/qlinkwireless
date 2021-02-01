@@ -4,9 +4,12 @@ let os = require("os");
 let path = require('path');
 const app = express();
 let apiRouter = express.Router();
-const PORT = 5628;
+const PORT = process.env.PORT || 5628;
 //const uuid = require('uuid/v4');
 
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
 
 app.get('/products', function (req, res) {
     fs.readFile(__dirname + '/API/products.json', (err, data) => {
