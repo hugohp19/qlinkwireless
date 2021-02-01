@@ -1,0 +1,196 @@
+@import '../../variables/variables';
+@import '../../fonts/fonts';
+@import '../../mixins/mixins.scss';
+
+.deviceDetail-container{
+  background-color: $div_backgroundColor;
+  padding: 20px;
+  border: 1px solid $borderColor;
+  border-radius: 5px;
+  min-width: 180px;
+  max-width: 350px;
+  min-height: 490px;
+  flex: 1;
+  p{
+    color: $letterColor;
+  }
+  .deviceDetail-imgContainer{
+    display: flex;
+    justify-content: center;
+    img{
+      min-height: 300px;
+      height: 100%;
+    }
+  }
+
+  .deviceDetail-left-container{
+    p{
+      margin-top: 20px;
+    }
+    .deviceDetail-top{
+      width: 100%;
+      margin-top: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid $lineColor;
+      h3{
+        font-size: 1.5rem;
+        margin-top: -20px;
+      }
+      p{
+        font-size: 0.9rem;
+      }
+    }
+
+    .deviceDetail-shipping{
+      padding-top: 20px;
+      div{
+        display: flex;
+        align-items: center;
+      }
+      img{
+        width: 30px;
+        height: 30px;
+        color: red;
+        margin-right: 20px;
+      }
+      p{
+        font-weight: 900;
+      }
+    }
+
+    .deviceDetail-bottom{
+      padding-top: 15px;
+      p{
+        font-size: 1rem;
+      }
+      .deviceDetail_bottom-btns{
+        height: 50px;
+        border-bottom: 1px solid $borderColor;
+        button{
+          width: 2rem;
+          height: 2rem;
+          border-radius: 50%;
+          margin-right: 30px;
+          border: none;
+          outline: none;
+         
+          span{
+            width:1.8rem;
+            height:1.8rem;
+            z-index: 5;
+            border-radius: 50%;
+            border: 2px solid darkgrey;
+          }
+          
+          &:focus{
+            border: 2px solid $secondaryColor;
+            border-radius: 50%;
+          }
+          &:nth-child(1){
+            background-color: white;
+           span{
+            background-color: black;
+           }
+          }
+          &:nth-child(2){
+            background-color: white;
+            span{
+              background-color: rgb(222, 201, 161);
+              color: rgb(222, 201, 161);
+             }
+          }
+          &:nth-child(3){
+            background-color: white;
+            span{
+              background-color: white;
+              color: white;
+             }
+          }
+        }
+      }
+      .deviceDetail-storage_payment{
+        padding: 20px 0;
+        border-bottom: 1px solid $borderColor;
+        div{
+          display:flex;
+          justify-content: space-between;
+        }
+        .deviceDetail-storage{
+          .btnStyle-CustomWidth {
+            width: 100px;
+          }
+        }
+        .deviceDetail-payment{
+          .btnStyle-CustomWidth {
+            width: 150px;
+          }
+        }
+      }
+      .deviceDetail_bottom-priceInfo{
+        margin-top: 10px;
+        @include flexSetUp(row, flex-start, flex-start);
+        .deviceDetail_bottom-price{
+          height: 100%;
+          width: 40%;
+          padding-right: 5px;
+        }
+        .deviceDetail_bottom-payments{
+          border-left: 1px solid $borderColor;
+          padding-left: 20px;
+          line-height: 0.5rem;
+          p{
+            font-size: 0.8rem;
+          }
+          span{
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+    .btnStyle{
+      margin-top: 10px;
+      width: 100%;
+    }
+    .deviceDetailSummary{
+      position: relative;
+      top: 10px;
+      p{
+        font-family: OpenSans-semiBold;
+        font-size: 0.8rem;
+        background-color: $secondaryColor;
+        color: white;
+        border-radius: 5px;
+        padding: 5px;
+        box-shadow: 6px 7px 17px -1px rgba(0,0,0,0.75);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 400px){
+  
+  .deviceDetail-container{
+    min-height: 300px;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width: 600px){
+  
+  .deviceDetail-container{
+    min-width: 250px;
+    padding: 20px 40px;
+
+    button.btnStyle{
+      display: unset;
+    }
+
+    .deviceDetail-bottom{
+      .deviceDetail_bottom-priceInfo{
+       h3{
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import '../../variables/variables';
+@import '../../fonts/fonts';
+@import '../../mixins/mixins.scss';
+
+
+.shopPage-container{
+  background-color: $pageBackgroundColor;
+  width: 100%;
+  padding: 25px 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2{
+    align-self: flex-start;
+  }
+}
