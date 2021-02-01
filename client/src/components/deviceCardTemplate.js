@@ -19,7 +19,7 @@ const DeviceCardTemplate = () => {
       <button className='btnStyle btnStyle-dark' onClick={()=>{
         setVisiblePopup(visiblePopup === 'none' ? 'unset' : 'none')
       }}>Bring Your Own Phone</button>
-      <div class="deviceDetailSummary" style={{display: visiblePopup}}>
+      <div className="deviceDetailSummary" style={{display: visiblePopup}}>
         <p>Nulla porttitor accumsan tincidunt. Nulla quis lorem ut libero.</p>
       </div>
     </div>

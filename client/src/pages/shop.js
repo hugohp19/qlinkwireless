@@ -28,7 +28,7 @@ const Shop = () => {
             <img src={WelcomeImage} alt='Welcome'/>
           </div>
           <div className='shopPage_welcome-text'>
-            <p>Welcome to Q Link Wireless... Donec rutrum congue leo eget malesuada. Curabitur aliquet quam id dui posuere blandit. Cras ultricies ligula sed magna dictum porta. Curabitur arcu erat, ligula sed magna aliquet quam accumsan id imperdiet et, porttitor at sem.</p>
+            <p>Welcome to Q Link Wireless... Donec rutrum congue leo eget malesuada. Curabitur aliquet quam id dui posuere blandit. Cras ultricies ligula sed magna dictum porta. Curabitur arcu erat, porttitor at sem.</p>
           </div>
         </div>
       </div>
