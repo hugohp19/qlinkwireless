@@ -30,8 +30,7 @@
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "cd client && npm start",
-    "dev": "concurrently --kill-others-on-fail \"npm run start\" \"npm run client\"",
-    "heroku-postbuild": "cd client && npm run build"
+    "dev": "concurrently --kill-others-on-fail \"npm run start\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
