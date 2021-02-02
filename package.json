@@ -2,7 +2,7 @@
   "name": "qlinkTest-BuildACart",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "engines": {
     "node": ">=14.3.0"
   },
@@ -19,11 +19,11 @@
     "gulp-newer": "^1.4.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^8.0.0",
-    "webpack": "^4.43.0",
-    "file-system": "^2.2.2"
+    "webpack": "^4.43.0"
   },
   "devDependencies": {
     "express-session": "^1.17.1",
+    "file-system": "^2.2.2",
     "uuid": "^8.1.0"
   },
   "scripts": {
@@ -31,7 +31,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "cd client && npm start",
     "dev": "concurrently --kill-others-on-fail \"npm run start\" \"npm run client\"",
-    "heroku-postbuild": "cd client && npm && CI= npm run build"
+    "heroku-postbuild": "cd client && npm && npm run build"
   },
   "keywords": [],
   "author": "",
