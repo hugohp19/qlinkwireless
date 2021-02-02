@@ -5,7 +5,7 @@ let path = require('path');
 const app = express();
 let apiRouter = express.Router();
 const PORT = process.env.PORT || 5628;
-//const uuid = require('uuid/v4');
+const uuid = require('uuid/v4');
 
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
